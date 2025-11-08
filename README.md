@@ -1,4 +1,4 @@
-# Employee Tasks Analytics API
+# Employee Tasks Analytics 
 
 This project provides analytics and visualizations for employee task tracking using Django and Pandas.
 
@@ -28,13 +28,13 @@ The following visual insights are generated and saved as images:
 | `/upload-csv/` | `POST` | Upload and process employee-task CSV file |
 | `/stats/` | `GET` | Get metrics and analytics data as JSON |
 | `/visuals/` | `GET` | Render visual dashboard with charts and tables |
-| `/visuals/api/` | `GET` | Serve all visuals and metrics as JSON API |
+| `/analytics/<api>/` | `GET` | Serve all visuals and metrics as JSON API |
 
 ## 🛠️ Tech Stack
 
 - **Backend:** Django, Pandas, Matplotlib  
 - **Database:** SQLite (can be configured for PostgreSQL/MySQL)  
-- **Frontend (optional):** HTML templates or React-based dashboard  
+- **Frontend (optional):** HTML templates dashboard  
 
 ## 📂 Project Structure
 
@@ -56,7 +56,7 @@ tasks/
 1. Upload a CSV file via `/upload-csv/`
 2. View computed stats via `/stats/`
 3. Check visualization dashboard at `/visuals/`
-4. Fetch chart data and metrics programmatically from `/visuals/api/`
+4. Fetch chart data and metrics programmatically from `/analytics/<api>/`
 
 ---
 **Author:** Naveen Prasath  

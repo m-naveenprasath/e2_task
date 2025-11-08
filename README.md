@@ -58,6 +58,12 @@ tasks/
 3. Check visualization dashboard at `/visuals/`
 4. Fetch chart data and metrics programmatically from `/analytics/<api>/`
 
+ **Build and start the containers:**
+```
+docker build -t e2-task .
+docker run -d -p 8000:8000 e2-task
+```
+
 ---
 **Author:** Naveen Prasath  
 **Version:** 1.0.0  

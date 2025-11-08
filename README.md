@@ -8,7 +8,7 @@ This project provides analytics and visualizations for employee task tracking us
 
 ### Uploaded CSV Template:
 
- - [📥 Download Manual Setup Guide (Word)](./docs/task_csv.csv)
+ - [📥 Download Uploaded CSV Template](./docs/task_csv.csv)
 
 ## 📊 Data Processing & Logic
 

@@ -1,0 +1,8 @@
+employeed_id,employee_name,department,task_id,task_name,hourspend,deadline,status
+E001,Naveen Prasath,Backend,T001,API Dev,5,07-11-2025,Completed
+E002,Hari,Backend,T002,Fix Bugs,3,08-11-2025,Completed
+E003,Arjun Kumar,Frontend,T003,Create UI,4,07-11-2025,Pending
+E004,Priya,Marketing,T004,Ads Plan,3,10-11-2025,Completed
+E005,Umapathi,Frontend,T005,Create UX,8,06-11-2025,Pending
+E006,Durga,Recruitment,T006,Hiring,3,10-11-2025,Completed
+E007,Maddy,Marketing,T007,Social Media,7,06-11-2025,Completed

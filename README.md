@@ -2,6 +2,14 @@
 
 This project provides analytics and visualizations for employee task tracking using Django and Pandas.
 
+### 🔗 Live Preview / Demo
+
+🌐 **Live Demo**: [E2_Task](http://136.113.233.247/api/visuals/)
+
+### Uploaded CSV Template:
+
+ - [📥 Download Manual Setup Guide (Word)](./docs/task_csv.csv)
+
 ## 📊 Data Processing & Logic
 
 The following metrics are calculated and served through API responses:
@@ -23,12 +31,19 @@ The following visual insights are generated and saved as images:
 
 ## 🧩 API Endpoints
 
-| Endpoint | Method | Description |
-|-----------|---------|-------------|
-| `/upload-csv/` | `POST` | Upload and process employee-task CSV file |
-| `/stats/` | `GET` | Get metrics and analytics data as JSON |
-| `/visuals/` | `GET` | Render visual dashboard with charts and tables |
-| `/analytics/<api>/` | `GET` | Serve all visuals and metrics as JSON API |
+    | Endpoint                                  | Method | Description                                    |
+    | ----------------------------------------- | ------ | ---------------------------------------------- |
+    | `/api/upload-csv/`                        | `POST` | Upload and process employee-task CSV file      |
+    | `/api/stats/`                             | `GET`  | Get metrics and analytics data as JSON         |
+    | `/api/visuals/`                           | `GET`  | Render visual dashboard with charts and tables |
+    | `/api/analytics/total-hours/`             | `GET`  | Get total hours spent per department           |
+    | `/api/analytics/completion-percentage/`   | `GET`  | Get task completion percentage per department  |
+    | `/api/analytics/top-employees/`           | `GET`  | Get top 3 employees with highest workload      |
+    | `/api/analytics/delayed-tasks/`           | `GET`  | Get list/count of delayed tasks                |
+    | `/api/analytics/average-hours-completed/` | `GET`  | Get average hours per completed task           |
+    | `/api/analytics/task-trend/`              | `GET`  | Get trend of tasks completed over time         |
+
+
 
 ## 🛠️ Tech Stack
 
@@ -53,10 +68,10 @@ tasks/
 
 ## ⚙️ Example Usage
 
-1. Upload a CSV file via `/upload-csv/`
-2. View computed stats via `/stats/`
-3. Check visualization dashboard at `/visuals/`
-4. Fetch chart data and metrics programmatically from `/analytics/<api>/`
+1. Upload a CSV file via `api/upload-csv/`
+2. View computed stats via `api/stats/`
+3. Check visualization dashboard at `api/visuals/`
+4. Fetch chart data and metrics programmatically from `api/analytics/<api>/`
 
  **Build and start the containers:**
 ```
@@ -64,6 +79,12 @@ docker build -t e2-task .
 docker run -d -p 8000:8000 e2-task
 ```
 
+**(Optional) volume mount:**
+```
+docker run -d -p 8000:8000 \
+  -v $(pwd)/static:/app/static \
+  e2-task
+```
 ---
 **Author:** Naveen Prasath  
 **Version:** 1.0.0  
